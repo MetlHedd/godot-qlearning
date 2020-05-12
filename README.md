@@ -1,7 +1,7 @@
 # Godot Q-Learning
 
 ## Descriptions
-Godot Q-Learning is a implemetation of a Q-Table for problems of Reinforcement Learning. It is based on the tutorial series ![https://simoninithomas.github.io/Deep_reinforcement_learning_Course/](https://simoninithomas.github.io/Deep_reinforcement_learning_Course/)
+Godot Q-Learning is a implemetation of a Q-Table for problems of Reinforcement Learning. It is based on the tutorial series https://simoninithomas.github.io/Deep_reinforcement_learning_Course/
 
 ## Using the example
 You can see the example using Q-Learnign to solve a maze created on `"Scenes/Game.tscn"` and `"Scenes/QFVisualizer.tscn"` to understand how to solve a simple maze problem.
@@ -58,7 +58,6 @@ You can see the example using Q-Learnign to solve a maze created on `"Scenes/Gam
 * actionsN: int = `4`  
   
     ```
-    Q-Table Configuration
     Number of actions
     Actions: up, down, left and right
     ```
@@ -73,7 +72,6 @@ You can see the example using Q-Learnign to solve a maze created on `"Scenes/Gam
 * seedToUse: int = `2`  
   
     ```
-    Hyperpamater intialization
     Seed to be used on the random number generation, if set to false the seed will be randomized
     ```
 
@@ -104,7 +102,6 @@ You can see the example using Q-Learnign to solve a maze created on `"Scenes/Gam
 * epsilon: float = `1.0`  
   
     ```
-    Exploration parameters
     Exploration rate
     ```
 
@@ -141,7 +138,6 @@ You can see the example using Q-Learnign to solve a maze created on `"Scenes/Gam
 * currentEpisode: int = `0`  
   
     ```
-    Variables for performing the algorithm
     Stores the number of the current episode
     ```
 
