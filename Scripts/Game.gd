@@ -67,7 +67,14 @@ func isInWinCell():
 	return false
 
 func movePlayer(direction):
+	var playerCell = $Map.world_to_map($Player/KinematicBody2D.position)
+	
+	$WalkedCells.set_cellv(playerCell, 0)
+	
 	$Player.movePlayerBody(direction)
 
 func newMazeGame():
 	$Player/KinematicBody2D.global_position = $Map.map_to_world(playerSpawnCell) + Vector2(16, 16)
+	
+	for cell in $WalkedCells.get_used_cells():
+		$WalkedCells.set_cellv(cell, -1)

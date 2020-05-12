@@ -1,10 +1,16 @@
 # Godot Q-Learning
 
 ## Descriptions
-Godot Q-Learning is a implemetation of a Q-Table for problems of Reinforcement Learning. It is based on the tutorial series https://simoninithomas.github.io/Deep_reinforcement_learning_Course/
+Godot Q-Learning is an implementation of a Q-Table for problems of Reinforcement Learning. It is based on the tutorial series https://simoninithomas.github.io/Deep_reinforcement_learning_Course/
 
 ## Using the example
-You can see the example using Q-Learnign to solve a maze created on `"Scenes/Game.tscn"` and `"Scenes/QFVisualizer.tscn"` to understand how to solve a simple maze problem.
+![qlearning-maze.gif](qlearning-maze.gif)
+
+You can use the algorithm however you may want, but it already has a maze example shown as above.
+Note that the example comes with:
+- 4 Actions: Up, down, left and right;
+- 256 States: since the default maze size is (16 * 16).
+You can change the default maze however you want, even expand it, but you will need to set the "number of states" based on the new maze.
 
 ## Docs
 ### Signals:  
@@ -18,7 +24,7 @@ You can see the example using Q-Learnign to solve a maze created on `"Scenes/Gam
   
     ```
     Executed when a new step is requested to be executed
-    Requires to update the array passed as reference like [newState, reward, done]
+    Requires to update the array passed as a reference like [newState, reward, done]
     ```
 
   
@@ -78,7 +84,7 @@ You can see the example using Q-Learnign to solve a maze created on `"Scenes/Gam
 * totalEpisodes: int = `100`  
   
     ```
-    Number of episoded to generate
+    Number of episodes to generate
     ```
 
 * learningRate: float = `0.8`  
@@ -108,7 +114,7 @@ You can see the example using Q-Learnign to solve a maze created on `"Scenes/Gam
 * maxEpsilon: float = `1.0`  
   
     ```
-    Exploration probability at start
+    Exploration probability at the start
     ```
 
 * minEpsilon: float = `0.01`  
@@ -120,13 +126,13 @@ You can see the example using Q-Learnign to solve a maze created on `"Scenes/Gam
 * decayRate: float = `0.001`  
   
     ```
-    Exponential decay rate for exploration pro
+    The exponential decay rate for exploration pro
     ```
 
 * rewards: Array = `[]`  
   
     ```
-    Acumulated rewards
+    Accumulated rewards
     ```
 
 * qTable: Array = `[]`  

@@ -7,7 +7,7 @@ class_name QFVisualizer
 signal newEpisode()
 
 # Executed when a new step is requested to be executed
-# Requires to update the array passed as reference like [newState, reward, done]
+# Requires to update the array passed as a reference like [newState, reward, done]
 signal executeStep(action, arrayToUpdate)
 
 # Q-Table Configuration
@@ -15,18 +15,18 @@ signal executeStep(action, arrayToUpdate)
 # Number of actions
 var actionsN : int = 4 # Actions: up, down, left and right
 # Number of states
-var statesN : int = 256 # Maze of 16 x 16
+var statesN : int = 16 * 16 # Maze of 16 x 16
 
 # Hyperpamater intialization
 
 # Seed to be used on the random number generation, if set to false the seed will be randomized
 var seedToUse : int = 2
-# Number of episoded to generate
+# Number of episodes to generate
 var totalEpisodes : int = 100
 # Learning rate
 var learningRate : float = 0.8
 # Max steps per episode
-var maxSteps : int = 256 * 5
+var maxSteps : int = (16 * 16) * 5
 # Discounting rate
 var gamma : float =  0.95
 
@@ -34,14 +34,14 @@ var gamma : float =  0.95
 
 # Exploration rate
 var epsilon : float = 1.0
-# Exploration probability at start
+# Exploration probability at the start
 var maxEpsilon : float = 1.0
 # Minimum exploration probability 
 var minEpsilon : float = 0.01
-# Exponential decay rate for exploration pro
+# The exponential decay rate for exploration pro
 var decayRate : float = 0.001
 
-# Acumulated rewards
+# Accumulated rewards
 var rewards : Array = []
 
 # The generated q-table (statesN x actionsN)
